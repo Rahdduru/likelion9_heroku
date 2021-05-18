@@ -4,6 +4,6 @@
 
 {% for posts in posts.all %}
 <hr>
-<a href="#">제목 : {{ posts.title }}</a>
+<p>제목 :<a href="{% url 'detail' posts.id %}">{{ posts.title }}</a></p>
 <p>작성 일지 및 시간 : {{ posts.pub_date }}</p>
 {% endfor %}
