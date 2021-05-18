@@ -1,0 +1,11 @@
+<h1> 작성된 글</h1>
+
+<a href="{% url 'home' %}">돌아가기</a>
+
+{% for x in posts.all %}
+<hr>
+<p>제목 : {{x.title}}</p>
+<p>작성 시간 : {{x.pub_date}}</p>
+<p>내용 : {{x.body}}</p>
+<a href="{% url 'edit' post.id %}">수정하기</a>
+{% endfor %}
